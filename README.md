@@ -1,5 +1,3 @@
----
-
 ## Project Overview
 
 The assignment includes **three main parts**:
@@ -77,6 +75,8 @@ python -m pytest
 
 ## Author
 
-**[Waseeq Ahmed]**
-Student ID: **[15146137]**
-Module: Applied Algorithms and Data Structures (502IT)
+**Waseeq Ahmed**
+
+**Student ID**: **15146137**
+
+**Module**: **Applied Algorithms and Data Structures (502IT)**
