@@ -1,69 +1,49 @@
-# Applied Algorithms and Data Structures (502IT)
-
-## Individual Technical Portfolio
-
-This repository contains my **individual portfolio submission** for the *Applied Algorithms and Data Structures (502IT)* module. The project demonstrates the practical application of core algorithmic concepts through the design, implementation, testing, and evaluation of three distinct computational systems. The work emphasises algorithm selection, data structure efficiency, complexity analysis, and reflective practice, in line with academic portfolio requirements.
-
 ---
 
 ## Project Overview
 
-The portfolio focuses on solving three real-world inspired problems using appropriate algorithms and data structures:
+The assignment includes **three main parts**:
 
-1. **Delivery Route Optimisation**
-   A heuristic solution to the Travelling Salesperson Problem (TSP) using the Nearest Neighbour algorithm combined with 2-opt local search optimisation.
+### 1. Delivery Route Optimisation (TSP)
 
-2. **Dynamic Resource Allocation**
-   A preemptive, priority-based CPU scheduling system implemented using a binary heap, including an aging mechanism to prevent starvation.
+* Solves a delivery routing problem using the **Nearest Neighbour** algorithm
+* Improves the route using **2-opt local search**
+* Demonstrates use of graph algorithms and heuristics
 
-3. **Recommendation Engine for a Bookstore**
-   A user–user collaborative filtering recommendation system using Jaccard similarity and an inverted index for scalability.
+### 2. Dynamic Resource Allocation
 
-Each problem is implemented independently using Python and object-oriented design principles, with supporting tests and performance evaluation.
+* Implements a **priority-based CPU scheduler**
+* Uses a **binary heap** for efficient scheduling
+* Includes an **aging mechanism** to reduce starvation
+
+### 3. Recommendation Engine
+
+* Builds a simple **book recommendation system**
+* Uses **user-user collaborative filtering**
+* Applies **Jaccard similarity** and an **inverted index**
 
 ---
 
-## Technologies and Concepts
+## Technologies Used
 
-* Python 3
-* Graph algorithms
-* Greedy heuristics and local search (2-opt)
-* Priority queues and heap data structures
+* Python
+* Data structures (heaps, graphs)
+* Greedy algorithms and local search
 * Scheduling algorithms
-* Collaborative filtering
-* Similarity metrics (Jaccard)
-* Algorithmic time and space complexity analysis
-* Unit and performance testing (pytest)
-
----
-
-## Repository Structure
-
-The repository is organised into logical modules reflecting each problem domain:
-
-* `src/routing/` – Graph representation and TSP solver
-* `src/scheduling/` – Process model, binary heap, and priority scheduler
-* `src/recommendation/` – Recommendation engine, similarity functions, and data structures
-* `src/utils/` – Benchmarking and visualisation utilities
-* `tests/` – Unit tests for each major component
-* `tools/` – Optional scripts for dataset generation and running recommendations
-* `main.py` – Demonstration script that runs all three systems
+* Basic recommendation systems
+* Unit testing with pytest
 
 ---
 
 ## How to Run the Project
 
-### Install Dependencies
-
-First, install the required Python libraries:
+### Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### Run the Full Demonstration
-
-To execute all three components (TSP, scheduler, and recommendation engine), run:
+### Run the main demo
 
 ```
 python main.py
@@ -71,55 +51,29 @@ python main.py
 
 This will:
 
-* Generate and solve a TSP instance and save visualisations
-* Simulate the priority-based scheduler and print execution statistics
-* Run the recommendation engine and display recommended books for a sample user
+* Run the TSP algorithm
+* Run the scheduler simulation
+* Show book recommendations for a sample user
 
 ---
 
-## Running Tests
+## Running Tests (Optional)
 
-Unit tests are provided to validate correctness of each subsystem. To run all tests:
+Unit tests are included to check individual parts of the code.
 
-```
-pytest
-```
-
-To include test coverage:
+Run tests using:
 
 ```
-pytest --cov=src
+python -m pytest
 ```
 
 ---
 
-## Recommendation Engine (Detailed Explanation)
+## Notes
 
-The recommendation engine uses a **user–user collaborative filtering** approach:
-
-1. An inverted index maps each book to the users who have purchased it.
-2. For a target user, only users sharing at least one book are considered as candidates.
-3. Jaccard similarity is calculated between the target user and each candidate user.
-4. Books not yet purchased by the target user are scored using weighted ratings:
-   similarity × rating.
-5. The top-k books with the highest scores are returned as recommendations.
-
-This design significantly reduces unnecessary similarity calculations and improves scalability.
-
----
-
-## Academic Context
-
-This repository serves as:
-
-* An assessed **individual technical portfolio**
-* Evidence of applied algorithmic engineering
-* A demonstration of translating theoretical concepts into working systems
-* A record of reflective and professional software development practice
-
-All implementations were manually written, tested, and evaluated. Any AI tools used were limited to research assistance or suggestion review and are documented separately in the portfolio submission.
-
----
+* The project is designed to run fully using `main.py`
+* Tests are included for verification but are not required to run the program
+* Code is organised using a `src/` folder structure
 
 ## Author
 
